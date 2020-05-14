@@ -8,25 +8,23 @@
   <div class="d-flex flex-column">
     <div class="profile">
       <%= image_tag("avatar.png", class: "img-fluid rounded-circle") %>
-      <h2 class="text-light"><a href="/">Nguyễn Ngọc Toàn</a></h2>
+      <h2 class="text-light"><%= link_to  t('header.name'), root_url %></h2>
       <div class="social-links mt-3 text-center">
-        <%= link_to '', '', class: "twitter fab fa-twitter" %>
-        <%= link_to '', '', class: "facebook fab fa-facebook" %>
-        <%= link_to '', '', class: "instagram fab fa-instagram" %>
-        <%= link_to '', '', class: "linkedin fab fa-linkedin" %>
-        <%= link_to '', '', class: "github fab fa-github" %>
+        <%= link_to '', 'https://www.facebook.com/ngoc.toan.3511', class: "facebook fab fa-facebook", target: '_blank' %>
+        <%= link_to '', 'https://www.instagram.com/n.toan206/?hl=vi', class: "instagram fab fa-instagram", target: '_blank' %>
+        <%= link_to '', 'https://github.com/ngoctoandhv95', class: "github fab fa-github", target: '_blank' %>
       </div>
     </div>
 
     <nav class="nav-menu">
       <ul>
-        <li class="active"><a href="/"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#skills"><i class="bx bx-book-content"></i> Skills</a></li>
-        <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
-        <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
-
+        <li class="active"><a href="#hero"><i class="fas fa-home"></i><span><%= t('header.home') %></span></a></li>
+        <li><a href="#profile"><i class="far fa-user"></i><span><%= t('header.profile') %></span></a></li>
+        <li><a href="#resume"><i class="fas fa-file"></i><span><%= t('header.resume') %></span></a></li>
+        <li><a href="#skills"><i class="fas fa-user-graduate"></i><span><%= t('header.skill') %></span></a></li>
+        <li><a href="#project"><i class="fas fa-tasks"></i><span><%= t('header.project') %></span></a></li>
+        <li><%= link_to image_tag('en.png'), locale:"en" if I18n.locale == :vi %> </li>
+        <li><%= link_to image_tag('vi.png'), locale:"vi" if I18n.locale == :en %> </li>
       </ul>
     </nav><!-- .nav-menu -->
     <button type="button" class="mobile-nav-toggle d-xl-none"><i class="fas fa-bars"></i></button>
@@ -37,8 +35,8 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
   <div class="hero-container" data-aos="fade-in">
-    <h1>Nguyễn Ngọc Toàn</h1>
-    <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
+    <h1><%= t('header.name') %></h1>
+    <p><%= t('header.slogan') %></p>
   </div>
 </section>
 <!-- End Hero -->
@@ -46,11 +44,15 @@
 <main id="main">
 
   <!-- ======= About Section ======= -->
-  <section id="about" class="about section-bg">
+  <section id="profile" class="profile-cl section-bg">
     <div class="container">
       <div class="section-title">
-        <h2>About</h2>
-        <p>Magnam dolores commodi suscipit.</p>
+        <h2><%= t('header.profile') %></h2>
+      </div>
+
+      <div class="career-goals">
+        <h1><%= t('profile.career_goals') %></h1>
+        <p><%= t('profile.career') %></p>
       </div>
 
       <div class="row">
@@ -58,23 +60,20 @@
           <%= image_tag("avatar.png", class: "img-fluid") %>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Fresher Fontend &amp; Ruby On Rails</h3>
-          <p class="font-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, s
-          </p>
+          <h3>Fresher Ruby On Rails &amp; FrontEnd </h3>
           <div class="row">
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-7 col-md-12">
               <ul>
-                <li><i class="far fa-calendar-alt"></i> <strong>Birthday:</strong> 20 June 1995</li>
-                <li><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> (+84) 974 841 621</li>
-                <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Nghe An</li>
-                <li><i class="fas fa-user-graduate"></i> <strong>Degree:</strong>Engineer</li>
+                <li><i class="far fa-calendar-alt"></i> <strong><%= t('profile.birthday') %></strong><%= t('profile.birthday_t') %></li>
+                <li><i class="fas fa-phone-alt"></i> <strong><%= t('profile.phone') %></strong> (+84) 974 841 621</li>
+                <li><i class="fas fa-map-marker-alt"></i> <strong><%= t('profile.location') %></strong><%= t('profile.location_t') %></li>
+                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> ngoctoandhv95@gmail.com</li>
               </ul>
             </div>
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-5 col-md-12">
               <ul>
-                <li><i class="fas fa-user-alt"></i> <strong>Age:</strong> 25</li>
-                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> ngoctoandhv95@gmail.com</li>
+                <li><i class="fas fa-user-alt"></i> <strong><%= t('profile.age') %></strong> 25</li>
+                <li><i class="fas fa-user-graduate"></i> <strong><%= t('profile.degree') %></strong><%= t('profile.degree_t') %></li>
                 <li><i class="fab fa-github"></i> <strong>Github:</strong> ngoctoandhv95</li>
                 <li><i class="fas fa-user-friends"></i> <strong>Freelance:</strong> Available</li>
               </ul>
@@ -89,57 +88,70 @@
   <section id="resume" class="resume">
     <div class="container">
       <div class="section-title">
-        <h2>Resume</h2>
+        <h2><%= t('header.resume') %></h2>
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-6" data-aos="fade-up">
-          <h3 class="resume-title">Sumary</h3>
+          <h3 class="resume-title"><%= t('resume.sumary') %></h3>
           <div class="resume-item pb-0">
-            <h4>Nguyen Ngoc Toan</h4>
-            <p><em></em></p>
+            <h4><%= t('header.name') %></h4>
             <ul>
-              <li>Tien Thuy - Quynh Luu - Nghe An</li>
+              <li><%= t('profile.location_t') %></li>
               <li>(+84) 974 941 621</li>
               <li>ngoctoandhv95@gmail.com</li>
             </ul>
           </div>
-          <h3 class="resume-title">Education</h3>
+          <h3 class="resume-title"><%= t('resume.education') %></h3>
           <div class="resume-item">
             <h4>Ruby developer</h4>
             <h5>11/2019 - 7/2020</h5>
-            <p><em>SUN ASTERISK - AWESOME ACADEMY</em></p>
-            <p>Ruby(Basic-Advance)/Rails/WebBase/Working Skill</p>
+            <p><em>IT ACADEMY: SUN ASTERISK - AWESOME ACADEMY</em></p>
+            <ul>
+              <li>Website: <a href="https://awesome-academy.com/">Awesome-academy</a></li>
+              <li>Ruby (Ruby on rails)</li>
+              <li>WebBase: Html/Css/Javascript (Jquery)</li>
+              <li>Database: MySQL</li>
+              <li>Working Skill</li>
+              <li>...</li>
+            </ul>
           </div>
           <div class="resume-item">
             <h4>Frontend developer</h4>
             <h5>12/2019 - 2/2020</h5>
-            <p><em>SUNTECH VIET NAM</em></p>
-            <p>Html5/Css3/Boostrap4/Javascript(Jquery)</p>
+            <p><em>IT ACADEMY: SUNTECH VIET NAM</em></p>
+            <ul>
+              <li>Html5/Css3/Bootstrap4/Javascript(Jquery)</li>
+            </ul>
           </div>
           <div class="resume-item">
             <h4>Automation and control engineering</h4>
             <h5>10/2013 - 6/2018</h5>
             <p><em>VINH UNIVERSITY</em></p>
-            <p>Graduated: Good</p>
+            <ul>
+              <li><%= t('resume.degree_class') %></li>
+              <li><%= t('resume.english') %></li>
+              <li><%= t('resume.scholarships') %></li>
+            </ul>
           </div>
         </div>
         <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="resume-title">Professional Experience</h3>
+          <h3 class="resume-title"><%= t('resume.experience') %></h3>
           <div class="resume-item">
-            <h4>ENGINEERING CALCULATING ENERGY SAVING</h4>
+            <h4><%= t('resume.sansie') %></h4>
             <h5>5/2019 - 10/2019</h5>
             <p><em>SANSIE VIETNAM</em></p>
             <ul>
-              <li>Accurate calculation of energy consumption</li>
+              <li><%= t('resume.sansie_1') %></li>
             </ul>
           </div>
           <div class="resume-item">
-            <h4>MANTAINANCE ENGINEER</h4>
+            <h4><%= t('resume.beer') %></h4>
             <h5>7/2018 - 4/2019</h5>
             <p><em>SAI GON BEER COMPANY - HA NOI</em></p>
             <ul>
-              <li>Check and operate are machines</li>
-              <li>Maintenance, machine maintenance</li>
+              <li><%= t('resume.beer_1') %></li>
+              <li><%= t('resume.beer_2') %></li>
+              <li><%= t('resume.beer_3') %></li>
             </ul>
           </div>
         </div>
@@ -151,70 +163,144 @@
   <section id="skills" class="skills section-bg">
     <div class="container">
       <div class="section-title">
-        <h2>Skills</h2>
+        <h2><%= t('header.skill') %></h2>
       </div>
+
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="skill-title">Programming language: </h3>
+          <h3 class="skill-title"><%= t('skill.programming_language') %></h3>
           <div class="icon-language">
-            <span class="pl-ruby">
-              <i class="fas fa-gem"></i>
-            </span>
-            <span class="pl-javascript">
-              <i class="fab fa-js-square"></i>
-            </span>
+            <span class="pl-ruby"><i class="fas fa-gem"></i></span>
+            <span class="pl-javascript"><i class="fab fa-js-square"></i></span>
           </div>
         </div>
       </div>
+
+
+
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="skill-title">Frameworks: </h3>
+          <h3 class="skill-title"><%= t('skill.frameworks') %></h3>
           <div class="icon-language">
-            <span class="pl-ruby">
-              <i class="fas fa-gem"></i>
-            </span>
-            <span class="fw-bootstrap">
-              <i class="fab fa-bootstrap"></i>
-            </span>
-            <span class="fw-sass">
-              <i class="fab fa-sass"></i>
-            </span>
-            <span class="fw-jquery">
-              <%= image_tag("logo-jquery.png", class: "img-logo") %>
-            </span>
+            <span class="pl-ruby"><i class="fas fa-gem"></i></span>
+            <span class="fw-bootstrap"><i class="fab fa-bootstrap"></i></span>
+            <span class="fw-sass"><i class="fab fa-sass"></i></span>
+            <span class="fw-jquery"><%= image_tag("logo-jquery.png", class: "img-logo") %></span>
           </div>
         </div>
       </div>
+
+
+
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="skill-title">Tools: </h3>
+          <h3 class="skill-title"><%= t('skill.tools') %></h3>
           <div class="icon-language">
-            <span class="t-git">
-              <i class="fab fa-git-alt"></i>
-            </span>
-            <span class="t-github">
-              <i class="fab fa-github"></i>
-            </span>
-            <span class="t-linux">
-              <i class="fab fa-linux"></i>
-            </span>
-            <span class="t-visual">
-              <%= image_tag("logo-visua.png", class: "img-logo") %>
-            </span>
+            <span class="t-git"><i class="fab fa-git-alt"></i></span>
+            <span class="t-github"><i class="fab fa-github"></i></span>
+            <span class="t-linux"><i class="fab fa-linux"></i></span>
+            <span class="t-visual"><%= image_tag("logo-visua.png", class: "img-logo") %></span>
           </div>
         </div>
       </div>
+
+
       <div class="row">
         <div class="col-lg-12">
-          <h3 class="skill-title">Work skill: </h3>
-            <ul>
-              <li><h4>Teamwork skill</h4></li>
-              <li><h4>Cross Functional Teams</h4></li>
-              <li><h4>Agile Development & Scrum</h4></li>
-            </ul>
-          </div>
+          <h3 class="skill-title"><%= t('skill.work_skill') %></h3>
+          <ul>
+            <li><h4><%= t('skill.teamwork_skill') %> </h4></li>
+            <li><h4>Agile Development & Scrum</h4></li>
+          </ul>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="skill-title"><%= t('skill.about') %></h3>
+          <ul>
+            <li><h4><%= t('skill.about_1') %></h4></li>
+            <li><h4><%= t('skill.about_2') %></h4></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section><!-- End Skills Section -->
+
+  <!-- ======= Project Section ======= -->
+  <section id="project" class="project">
+    <div class="container">
+      <div class="section-title">
+        <h2><%= t('header.project') %></h2>
+      </div>
+      <div class="project-item">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="project-title">CVs:</div>
+            <div class="link-project">
+              <h2>
+                Link: <%= link_to  "CVs", "", target: '_blank' %>
+              </h2>
+            </div>
+            <div class="info_project">
+              <p>Technology: Html5/ Css3/ Boostrap4/ Javascript (Jquery)/ Ruby (Ruby on Rails)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="project-title">Convert file PSD to HTML/CSS</div>
+            <div class="link-project">
+              <h2>
+                Link: <%= link_to  "Shop-FE", "https://shop-fe.herokuapp.com/index.html", target: '_blank' %>
+              </h2>
+            </div>
+            <div class="info_project">
+              <p>Technology: Html5/ Css3/ Responsive</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="project-title">Tutorial-ROR &amp; MacShop-ROR</div>
+            <div class="link-project">
+              <h2>
+                Link: <%= link_to  "Tutorial-ROR", "https://tutotial-ror-28022020.herokuapp.com/", target: '_blank' %>
+              </h2>
+              <h2>
+                Link: <%= link_to  "MacShop-ROR", "https://macshop-28022020.herokuapp.com/", target: '_blank' %>
+              </h2>
+            </div>
+            <div class="info_project">
+              <p>Technology: Html5/ Css3/ Boostrap4/ Javascript (Jquery/Ajax)/ Ruby (Ruby on Rails - Basic)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="project-title">JobUp-ROR</div>
+            <div class="link-project">
+              <h2>
+                Link: <%= link_to  "JobUp-ROR", "https://infinite-cove-52611.herokuapp.com/", target: '_blank' %>
+              </h2>
+            </div>
+            <div class="info_project">
+              <p>Introduce: JobUp is a recruitment website, connecting businesses and candidates. </p>
+              <p>Technology: Html5/ Css3/ Boostrap4/ Javascript (Jquery/Ajax)/ Ruby (Ruby on Rails)</p>
+              <p>Ruby gem: Devise/ Rails-admin/ Simple-form/ Carrierwave/ I18N ...  </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Skills Section -->
+
+  <button class="btn btn-succes back-to-top"><i class="fas fa-angle-up"></i></button>
+
 
 </main>
