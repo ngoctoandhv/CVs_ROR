@@ -7,6 +7,7 @@ vi:
     skill: 'Kỹ Năng'
     project: 'Dự Án'
     slogan: 'Tôi là newblie dev Ruby :)'
+    review: 'Xem CV'
   profile:
     career_goals: 'Mục Tiêu Nghề Nghiệp'
     career: 'Tìm kiếm một cơ hội việc làm để cống hiến hết mình với công việc. Mục tiêu hoàn thiện và nâng cao các kỹ năng để trở thành Full-Stack Developer trong tương lai.'
@@ -18,6 +19,8 @@ vi:
     degree: 'Trình độ: '
     degree_t: 'Kỹ sư'
     age: 'Tuổi: '
+    gender: 'Giới tính:'
+    gender_t: 'Nam'
   resume:
     sumary: 'Tổng Hợp'
     education: 'Học Vấn'

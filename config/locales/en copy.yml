@@ -7,6 +7,7 @@ en:
     skill: 'Skills'
     project: 'Project'
     slogan: 'I am newbie developer Ruby :)'
+    review: 'Review CV'
   profile:
     career_goals: 'Career goals'
     career: 'Look for a job opportunity to dedicate with me own capacity. The goal of perfecting and improving skills to become Full-stack Developer in the future.'
@@ -18,6 +19,8 @@ en:
     degree: 'Degree: '
     degree_t: 'Engineer'
     age: 'Age: '
+    gender: 'Gender: '
+    gender_t: 'Male'
   resume:
     sumary: 'Sumary'
     education: 'Education'
