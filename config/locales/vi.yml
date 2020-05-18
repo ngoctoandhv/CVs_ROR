@@ -5,7 +5,8 @@ vi:
     profile: 'Hồ Sơ'
     resume: 'Sơ Yếu Lý Lịch'
     skill: 'Kỹ Năng'
-    project: 'Dự Án'
+    project_personal: 'Dự Án Cá Nhân'
+    project_team: 'Dự Án Nhóm'
     slogan: 'Tôi là newblie dev Ruby :)'
     review: 'Xem CV'
   profile:
@@ -43,3 +44,10 @@ vi:
     about: 'Thông Tin Thêm:'
     about_1: 'Sẵn sàng học hỏi và thích nghi nhanh chóng với công nghệ mới'
     about_2: 'Ý thức trách nhiệm, kỹ năng giao tiếp và tinh thần đồng đội'
+  project:
+    title: 'JobUp - Chắp cánh cho sự nghiệp của bạn'
+    description: 'Mô tả: JobUp là một trang web tuyển dụng, kết nối các doanh nghiệp và ứng viên.'
+    teamsize: 'Số thành viên: 3'
+    my_position: 'Vị trí của tôi: Thành viên'
+    my_responsibilities: 'Trách nhiệm của tôi: '
+    technologies: 'Công nghệ sử dụng: '

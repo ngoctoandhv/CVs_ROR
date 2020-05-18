@@ -22,7 +22,8 @@
         <li><a href="#profile"><i class="far fa-user"></i><span><%= t('header.profile') %></span></a></li>
         <li><a href="#resume"><i class="fas fa-file"></i><span><%= t('header.resume') %></span></a></li>
         <li><a href="#skills"><i class="fas fa-user-graduate"></i><span><%= t('header.skill') %></span></a></li>
-        <li><a href="#project"><i class="fas fa-tasks"></i><span><%= t('header.project') %></span></a></li>
+        <li><a href="#project-personal"><i class="fas fa-user-check"></></i><span><%= t('header.project_persona') %></span></a></li>
+        <li><a href="#project-team"><i class="fas fa-users"></i><span><%= t('header.project_team') %></span></a></li>
         <li><a href="https://www.topcv.vn/xem-cv/66377146c5ad15a24e815cad50c8e642" target="_blank"><i class="fas fa-search"></i><span><%= t('header.review') %></span></a></li>
         <li><%= link_to image_tag('en.png'), locale:"en" if I18n.locale == :vi %> </li>
         <li><%= link_to image_tag('vi.png'), locale:"vi" if I18n.locale == :en %> </li>
@@ -61,7 +62,7 @@
           <%= image_tag("avatar.png", class: "img-fluid") %>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Fresher Ruby On Rails &amp; FrontEnd </h3>
+          <h3>Intern Ruby On Rails &amp; FrontEnd </h3>
           <div class="row">
             <div class="col-lg-7 col-md-12">
               <ul>
@@ -165,7 +166,6 @@
       <div class="section-title">
         <h2><%= t('header.skill') %></h2>
       </div>
-
       <div class="row">
         <div class="col-lg-12">
           <h3 class="skill-title"><%= t('skill.programming_language') %></h3>
@@ -175,9 +175,6 @@
           </div>
         </div>
       </div>
-
-
-
       <div class="row">
         <div class="col-lg-12">
           <h3 class="skill-title"><%= t('skill.frameworks') %></h3>
@@ -189,9 +186,6 @@
           </div>
         </div>
       </div>
-
-
-
       <div class="row">
         <div class="col-lg-12">
           <h3 class="skill-title"><%= t('skill.tools') %></h3>
@@ -203,8 +197,6 @@
           </div>
         </div>
       </div>
-
-
       <div class="row">
         <div class="col-lg-12">
           <h3 class="skill-title"><%= t('skill.work_skill') %></h3>
@@ -214,7 +206,6 @@
           </ul>
         </div>
       </div>
-
       <div class="row">
         <div class="col-lg-12">
           <h3 class="skill-title"><%= t('skill.about') %></h3>
@@ -227,14 +218,13 @@
     </div>
   </section><!-- End Skills Section -->
 
-  <!-- ======= Project Section ======= -->
-  <section id="project" class="project">
+  <!-- ======= Project personal Section ======= -->
+  <section id="project-personal" class="project">
     <div class="container">
       <div class="section-title">
-        <h2><%= t('header.project') %></h2>
+        <h2><%= t('header.project_persona') %></h2>
       </div>
       <div class="project-item">
-
         <div class="row">
           <div class="col-lg-12">
             <div class="project-title">CVs:</div>
@@ -248,7 +238,6 @@
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-lg-12">
             <div class="project-title">Convert file PSD to HTML/CSS</div>
@@ -262,7 +251,6 @@
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-lg-12">
             <div class="project-title">Tutorial-ROR &amp; MacShop-ROR</div>
@@ -279,19 +267,56 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section><!-- End Skills Section -->
 
+  <!-- ======= Project team Section ======= -->
+  <section id="project-team" class="project project-team">
+    <div class="container">
+      <div class="section-title">
+        <h2><%= t('header.project_team') %></h2>
+      </div>
+      <div class="project-item">
         <div class="row">
           <div class="col-lg-12">
-            <div class="project-title">JobUp-ROR</div>
+            <div class="project-title"><%= t('project.title') %></div>
             <div class="link-project">
               <h2>
-                Link: <%= link_to  "JobUp-ROR", "https://infinite-cove-52611.herokuapp.com/", target: '_blank' %>
+                Link Heroku: <%= link_to  "JobUp-Heroku", "https://infinite-cove-52611.herokuapp.com/", target: '_blank' %>
+              </h2>
+              <h2>
+                Link GitHub: <%= link_to  "JobUp-GitHub", "https://github.com/awesome-academy/pr1909-group1", target: '_blank' %>
               </h2>
             </div>
             <div class="info_project">
-              <p>Introduce: JobUp is a recruitment website, connecting businesses and candidates. </p>
-              <p>Technology: Html5/ Css3/ Boostrap4/ Javascript (Jquery/Ajax)/ Ruby (Ruby on Rails)</p>
-              <p>Ruby gem: Devise/ Rails-admin/ Simple-form/ Carrierwave/ I18N ...  </p>
+              <p><%= t('project.description') %></p>
+              <p><%= t('project.teamsize') %></p>
+              <p><%= t('project.my_position') %></p>
+              <p><%= t('project.my_responsibilities') %></p>  
+              <ul>
+                <li>[FE] Custom 80% page </li>
+                <li>[FE] User experience (BackToTop - Scroll top) </li>
+                <li>[BE] Register, log in,active account and reset password by email by email (Gem devise)</li>
+                <li>[BE] Admin manager website</li>
+                <li>[BE] Text editor for description job_post, upload image,cv</li>
+                <li>[BE] Multi-language function</li>
+                <li>[BE] Search and Fillter job by salary, expiration date (Ajax)</li>
+                <li>...</li>
+              </ul>
+              <p><%= t('project.technologies') %></p>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li> Linux (Ubuntu)</li>
+                <li>Ruby (Ruby on Rails)</li>
+                <li>JavaScript (Jquery)</li>
+                <li>Bootstrap 4</li>
+                <li>Html5/Css3 (Sass)</li>
+                <li>Ajax</li>
+                <li>Git / Github</li>
+                <li>Agile</li>
+              </ul>
+              <p>Ruby gem: Devise/ Rails-admin/ Simple-form/ Carrierwave/ I18N/ Paranoia/ Ransack/ Faker...  </p>
             </div>
           </div>
         </div>

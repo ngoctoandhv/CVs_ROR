@@ -5,7 +5,8 @@ en:
     profile: 'Profile'
     resume: 'Resume'
     skill: 'Skills'
-    project: 'Project'
+    project_personal: 'Project Personal'
+    project_team: 'Project Team'
     slogan: 'I am newbie developer Ruby :)'
     review: 'Review CV'
   profile:
@@ -43,3 +44,10 @@ en:
     about: 'About:'
     about_1: 'Willingness to learn and adapt new technology quickly'
     about_2: 'Sense of responsibility, communication skills and team spirit'
+  project:
+    title: 'JobUp - Wings for your career'
+    description: 'Description: JobUp is a recruitment website, connecting businesses and candidates.'
+    teamsize: 'Team size: 3'
+    my_position: 'My position: Member'
+    my_responsibilities: 'My responsibilities'
+    technologies: 'Technologies used'
