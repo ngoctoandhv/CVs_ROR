@@ -62,21 +62,20 @@
           <%= image_tag("avatar.png", class: "img-fluid") %>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Intern Ruby On Rails &amp; FrontEnd </h3>
+          <h3>Fresher/Intern Ruby On Rails &amp; FrontEnd </h3>
           <div class="row">
             <div class="col-lg-7 col-md-12">
               <ul>
-                <li><i class="far fa-calendar-alt"></i> <strong><%= t('profile.birthday') %></strong><%= t('profile.birthday_t') %></li>
                 <li><i class="fas fa-map-marker-alt"></i> <strong><%= t('profile.location') %></strong><%= t('profile.location_t') %></li>
                 <li><i class="fas fa-phone-alt"></i> <strong><%= t('profile.phone') %></strong> <a href="tel:0974841621">0974 841 621</a></li>
-                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:ngoctoandhv95@gmail.com" target="_blank">ngoctoandhv95@gmail.com</a></li>
-                <li><i class="fab fa-github"></i> <strong>Github:</strong> <a href="https://github.com/ngoctoandhv95" target="_blank">ngoctoandhv95</a></li>
+                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:nguyenngoctoandev@gmail.com" target="_blank">nguyenngoctoandev@gmail.com</a></li>
+                <li><i class="fab fa-github"></i> <strong>Github:</strong> <a href="https://github.com/ngoctoandhv" target="_blank">ngoctoandhv</a></li>
               </ul>
             </div>
             <div class="col-lg-5 col-md-12">
               <ul>
                 <li><i class="fas fa-venus-mars"></i><strong><%= t('profile.gender') %></strong> <%= t('profile.gender_t')%></li>
-                <li><i class="fas fa-user-alt"></i> <strong><%= t('profile.age') %></strong> 25</li>
+                <li><i class="fas fa-user-alt"></i> <strong><%= t('profile.age') %></strong> 24</li>
                 <li><i class="fas fa-user-graduate"></i> <strong><%= t('profile.degree') %></strong><%= t('profile.degree_t') %></li>
                 <li><i class="fas fa-user-friends"></i> <strong>Freelance:</strong> Available</li>
               </ul>
@@ -101,13 +100,12 @@
             <ul>
               <li><%= t('profile.location_t') %></li>
               <li><a href="tel:0974841621">0974 841 621</a></li>
-              <li><a href="mailto:ngoctoandhv95@gmail.com">ngoctoandhv95@gmail.com</a></li>
+              <li><a href="mailto:ngoctoandhv95@gmail.com">nguyenngoctoandev@gmail.com</a></li>
             </ul>
           </div>
           <h3 class="resume-title"><%= t('resume.education') %></h3>
           <div class="resume-item">
             <h4>Ruby developer</h4>
-            <h5>11/2019 - 7/2020</h5>
             <p><em>IT ACADEMY: SUN ASTERISK - AWESOME ACADEMY</em></p>
             <ul>
               <li>Website: <a href="https://awesome-academy.com/">Awesome-academy</a></li>
@@ -118,43 +116,49 @@
           </div>
           <div class="resume-item">
             <h4>Frontend developer</h4>
-            <h5>12/2019 - 2/2020</h5>
             <p><em>IT ACADEMY: SUNTECH VIET NAM</em></p>
             <ul>
+              <li>Website: <a href="http://suntech.edu.vn/">SuntechVN</a></li>
               <li>Html5/Css3/Bootstrap4/Javascript(Jquery)</li>
             </ul>
           </div>
           <div class="resume-item">
             <h4>Automation and control engineering</h4>
-            <h5>10/2013 - 6/2018</h5>
             <p><em>VINH UNIVERSITY</em></p>
-            <ul>
-              <li><%= t('resume.degree_class') %></li>
-              <li><%= t('resume.english') %></li>
-              <li><%= t('resume.scholarships') %></li>
-            </ul>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="100">
           <h3 class="resume-title"><%= t('resume.experience') %></h3>
           <div class="resume-item">
-            <h4><%= t('resume.sansie') %></h4>
-            <h5>5/2019 - 10/2019</h5>
-            <p><em>SANSIE VIETNAM</em></p>
+            <h4>INTERNSHIP SUN ASTERISK Inc - AWESOME ACADEMY</h4>
+            <h5>9/2019 - 7/2020</h5>
+            <p><em>Project - JobUp</em></p>
             <ul>
-              <li><%= t('resume.sansie_1') %></li>
+              <li>JobUp is a recruitment website, connecting businesses and candidates.</li>
+              <li>Website: <a href="https://infinite-cove-52611.herokuapp.com/">JobUp Heroku</a></li>
+              <li>My responsibilities</li>
+              <ul>
+                <li>[FE] Custom 80% page, User experience (BackToTop - Scroll top) </li>
+                <li>[BE] Register, log in,active account and reset password by email by email (Gem devise)</li>
+                <li>[BE] Admin manager website </li>
+                <li>[BE] Text editor for description job_post, upload image,cv</li>
+                <li>[BE] Multi-language function</li>
+                <li>[BE] Search and Fillter job by salary, expiration date (Ajax)</li>
+                <li>[BE] State machines, update candidate's status when applying</li>
+              </ul>
+              <li>Technologies used</li>
+              <ul>
+                <li>Visual Studio Code </li>
+                <li>Linux (Ubuntu)</li>
+                <li>Ruby (Ruby on Rails)</li>
+                <li>JavaScript (Jquery)/ Ajax</li>
+                <li>HTML5/CSS3 (Sass)/ Bootstrap 4</li>
+                <li>Git / Github)</li>
+                <li>Agile (Scrum)</li>
+              </ul>
             </ul>
           </div>
-          <div class="resume-item">
-            <h4><%= t('resume.beer') %></h4>
-            <h5>7/2018 - 4/2019</h5>
-            <p><em>SAI GON BEER COMPANY - HA NOI</em></p>
-            <ul>
-              <li><%= t('resume.beer_1') %></li>
-              <li><%= t('resume.beer_2') %></li>
-              <li><%= t('resume.beer_3') %></li>
-            </ul>
-          </div>
+
         </div>
       </div>
     </div>
@@ -286,7 +290,7 @@
                 Link Heroku: <%= link_to  "JobUp-Heroku", "https://infinite-cove-52611.herokuapp.com/", target: '_blank' %>
               </h2>
               <h2>
-                Link GitHub: <%= link_to  "JobUp-GitHub", "https://github.com/awesome-academy/pr1909-group1", target: '_blank' %>
+                Link GitHub: <%= link_to  "JobUp-GitHub", "https://github.com/awesome-academy/pr1909-group1/tree/project1", target: '_blank' %>
               </h2>
             </div>
             <div class="info_project">
